@@ -1,0 +1,33 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class GuiApp extends JFrame
+{
+    private JLabel jsFirstName;
+    private JTextField textField1;
+    private JButton clickMeButton;
+    private JPanel MainPanel;
+
+    //Constructor
+    public GuiApp()
+    {
+        setContentPane(MainPanel);
+        setTitle("Simple GUI App"); //title of gui
+        setDefaultCloseOperation(EXIT_ON_CLOSE); //what happens when you close the window
+        setSize(300,200); //width and height of gui box
+        setLocationRelativeTo(null);
+        setVisible(true); //shows the window to the user when running
+        clickMeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e)
+            {
+                JOptionPane.showMessageDialog(GuiApp.this, "hello world");
+            }
+        });
+    }
+
+    public static void main(String[] args)
+    {
+        new Main();
+    }
